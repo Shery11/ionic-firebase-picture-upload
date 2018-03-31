@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Submit Picture</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+
+   <ion-label color="primary">Enter text</ion-label>
+   <ion-input placeholder="Enter text" [(ngModel)]="text"></ion-input>
+
+  <button ion-button full icon-left (click)="takePicture('gallery')">
+     <ion-icon name="md-image"></ion-icon>
+  Select Picture</button>
+
+  <ion-grid>
+   <ion-row>
+     <ion-col col-12>
+      <img [src]="base64Image" *ngIf="base64Image" />
+     </ion-col>
+   </ion-row>
+ </ion-grid>
+
+  <button ion-button full icon-left (click)="save()">
+    <ion-icon name="checkmark"></ion-icon> Upload
+  </button>
+
+
+ 
+
+</ion-content>
